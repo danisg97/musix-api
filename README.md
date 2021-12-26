@@ -2,7 +2,7 @@
 
 Consumo de *Musixmatch API* [https://developer.musixmatch.com/].
 
-![musixmatch-logo](../musixapi/mxmatch-logo.png "Musixmatch")
+![musixmatch-logo](mxmatch-logo.png "Musixmatch")
 
 ---
 
