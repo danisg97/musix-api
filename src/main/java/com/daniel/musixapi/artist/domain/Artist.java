@@ -1,11 +1,13 @@
 package com.daniel.musixapi.artist.domain;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Artist {
+public class Artist implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private Long id;
-    private String mbid;
     private String name;
 
     public Long getId() {
@@ -14,14 +16,6 @@ public class Artist {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getMbid() {
-        return mbid;
-    }
-
-    public void setMbid(String mbid) {
-        this.mbid = mbid;
     }
 
     public String getName() {
@@ -33,24 +27,23 @@ public class Artist {
     }
 
     @Override
-    public String toString() {
-        return "Artist{" +
-                "id=" + id +
-                ", mbid='" + mbid + '\'' +
-                ", name='" + name + '\'' +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Artist artist = (Artist) o;
-        return Objects.equals(id, artist.id) && Objects.equals(mbid, artist.mbid) && Objects.equals(name, artist.name);
+        return Objects.equals(id, artist.id) && Objects.equals(name, artist.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, mbid, name);
+        return Objects.hash(id, name);
+    }
+
+    @Override
+    public String toString() {
+        return "Artist{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

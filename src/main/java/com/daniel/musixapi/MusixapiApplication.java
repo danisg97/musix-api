@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MusixapiApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(MusixapiApplication.class, args);
+
 	}
 
 }
